@@ -1,0 +1,160 @@
+.carousel-content {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.text-container {
+  max-width: 550px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-img {
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+}
+ .card {
+  border-radius: 0;
+ } 
+ .card img{
+  width: 50px;
+  margin: 0 auto;
+  background-color: white;
+ }
+ .card p{
+  margin-top: 10px;
+ }
+.bg-lightpink {
+  background-color: #f8c8d7;
+}
+.bg-lightblue {
+  background-color: #add8e6;
+}
+.bg-lightgreen {
+  background-color: #90ee90; 
+}
+
+.alert-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 9999;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    right: -300px;
+    opacity: 0;
+  }
+  100% {
+    right: 20px;
+    opacity: 1;
+  }
+}
+
+.alert-message-container {
+  position: fixed;
+  top: 20px;
+  right: -100%;
+  z-index: 1050;
+  animation: slideIn 1s ease-out;
+}
+.alert{
+  background-color: #90ee90;
+}
+@keyframes slideIn {
+  0% {
+    right: -300px;
+    opacity: 0;
+  }
+  100% {
+    right: 20px;
+    opacity: 1;
+  }
+}
+
+.alert-message-container.show {
+  right: 20px;
+}
+
+.alert {
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  margin: 0;
+}
+
+
+.price .btn {
+    font-size: 1.5rem;
+}
+
+.price .btn:hover {
+    background-color: rgb(99, 99, 219);
+}
+.heart{
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: opacity 1s ease, visibility 1s ease;
+  cursor: pointer;
+}
+.card:hover .heart {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+  /* slide Responsive Styles */
+@media (max-width: 768px) {
+  .text-container {
+    margin: 0;
+    max-width: 90%;
+  }
+  .carousel-title {
+    font-size: 1.5rem;
+  }
+  .carousel-description {
+    font-size: 1rem;
+  }
+  .carousel-img {
+    width: 250px;
+    height: 250px;
+  }
+  .carousel-content {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+  
+
+
+@media (max-width: 767px) {
+    .img-container {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .img-container {
+        height: 150px;
+    }
+}
